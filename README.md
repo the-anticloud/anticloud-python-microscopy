@@ -1,288 +1,42 @@
 # PYTHON_MICROSCOPY
 
-**Category:** SCIENTIFIC_LAB
-**Status:** Active development with Anticloud overlay
+> Anticloud offline package — upstream: python-microscopy/python-microscopy @ `master`.
 
 ## What This Project Does
 
-PYTHON_MICROSCOPY is an open-source project in the SCIENTIFIC_LAB category.
+The python-microscopy environment - an open-source package for light microscopy
 
-This project provides tools, libraries, and functionality for developers
-and end users working in the SCIENTIFIC_LAB domain. It is part of the
-Anticloud ecosystem, which adds measured performance improvements,
-security hardening, and comprehensive documentation to upstream
-open-source projects.
+## Upstream README
 
-The project addresses key challenges in SCIENTIFIC_LAB by providing:
+# <img alt="PYME" src="PYME/resources/icons/pymeLogo.png" style="float:left"> The PYthon Microscopy Environment
 
-- A well-tested, community-driven codebase
-- Standard interfaces compatible with the broader ecosystem
-- Documentation and examples for common use cases
-- Integration points for the Anticloud overlay improvements
+![tag](https://img.shields.io/github/v/tag/python-microscopy/python-microscopy?sort=semver&logo=github)
+[![DOI](https://zenodo.org/badge/224552047.svg)](https://zenodo.org/badge/latestdoi/224552047)
+![commits](https://img.shields.io/github/commit-activity/m/python-microscopy/python-microscopy?logo=github)
+![testing](https://img.shields.io/azure-devops/tests/davidbaddeleynz/pyme-ci/2/master?logo=azuredevops)
 
-## Installation
+PYME (the PYthon Microscopy Environment) is an open-source application suite for light microscopy acquisition, data storage, visualization, and analysis. It offers a particularly comprehensive set of features for single-molecule localization techniques (PALM, STORM, PAINT, etc ...), but also supports many other modalities. The package is multi-platform, running on Windows, Linux, and OSX.
 
-### Prerequisites
+<!-- ![license](https://img.shields.io/github/license/python-microscopy/python-microscopy) -->
+<!--![conda](https://img.shields.io/conda/v/david_baddeley/python-microscopy.svg)
+![plat](https://img.shields.io/conda/pn/david_baddeley/python-microscopy.svg)-->
 
-Before installing PYTHON_MICROSCOPY, ensure you have the following:
+- **Website:** https://www.python-microscopy.org
+- **Installation:** https://python-microscopy.org/doc/Installation/Installation.html
+- **Documentation:** https://python-microscopy.org/doc/
+- **Source code:** https://github.com/python-microscopy/python-microscopy/
+- **Contributing:** https://python-microscopy.org/doc/Contributing.html
+- **Bug reports:** https://github.com/python-microscopy/python-microscopy/issues
 
-- A compatible operating system (Linux, macOS, or Windows)
-- Required build tools as specified by the upstream project
-- Runtime dependencies per the upstream requirements
+The documentation is also available in the *docs* subdirectory of the repository.
 
-### From Source
-
-To build from source, source the project and follow the
-upstream build instructions:
-
-```bash
-git source https://github.com/python-microscopy/python-microscopy/python-microscopy.git
-cd python-microscopy
-# Follow upstream build system (Makefile, CMake, setup.py, etc.)
-make
-sudo make install
-```
-
-### Package Managers
-
-Depending on your platform, PYTHON_MICROSCOPY may be available
-through package managers such as apt, brew, or pip. Refer to
-the upstream documentation for platform-specific instructions.
-
-## Usage
-
-### Basic Usage
-
-After installation, PYTHON_MICROSCOPY can be invoked as follows:
-
-```bash
-# Display help and available options
-python-microscopy --help
-
-# Run with default configuration
-python-microscopy
-`
-
-### Common Operations
-
-The following are common operations for PYTHON_MICROSCOPY:
-
-1. **Initialization** - Set up the project environment and configuration
-2. **Execution** - Run the main functionality with appropriate parameters
-3. **Monitoring** - Check status and output during operation
-4. **Shutdown** - Cleanly terminate and save state
-
-### Examples
-
-```bash
-# Example 1: Basic invocation
-python-microscopy --input /path/to/input --output /path/to/output
-
-# Example 2: With custom configuration
-python-microscopy --config /path/to/config.yaml
-
-# Example 3: Verbose mode for debugging
-python-microscopy --verbose --log-level debug
-`
-
-## API
-
-### Overview
-
-PYTHON_MICROSCOPY exposes a standard API consistent with its category.
-The API can be accessed programmatically or through the command
-line interface.
-
-### Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /status | Get current status |
-| POST | /execute | Execute main operation |
-| GET | /results | Retrieve results |
-| DELETE | /reset | Reset to initial state |
-
-### Authentication
-
-API authentication is handled through standard mechanisms.
-Refer to the upstream documentation for specific authentication
-requirements and token management.
-
-### Rate Limiting
-
-The API implements rate limiting to prevent abuse. Default limits
-are configurable through the configuration file.
-
-## Dependencies
-
-### Build Dependencies
-
-- Compiler (GCC, Clang, or MSVC)
-- Build system (Make, CMake, or Meson)
-- Package manager (pip, npm, or cargo)
-
-### Runtime Dependencies
-
-Runtime dependencies are managed by the upstream project build
-system. Key dependencies include:
-
-- Standard library components
-- Third-party libraries as specified in upstream documentation
-- System libraries required for operation
-
-### Optional Dependencies
-
-Some features may require additional optional dependencies.
-These are documented in the upstream README and can be
-installed separately as needed.
-
-## Configuration
-
-### Configuration File
-
-PYTHON_MICROSCOPY uses a configuration file for runtime settings.
-The default location is typically:
-
-- **Linux/macOS:** ~/.config/python-microscopy/config.yaml
-- **Windows:** %APPDATA%\python-microscopy\config.yaml
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| log_level | string | info | Logging verbosity |
-| output_dir | string | ./output | Output directory |
-| max_workers | int | 4 | Maximum worker threads |
-| timeout | int | 30 | Operation timeout (seconds) |
-
-### Environment Variables
-
-The following environment variables can override configuration:
-
-- **PYTHON_MICROSCOPY_LOG_LEVEL** - Override log level
-- **PYTHON_MICROSCOPY_CONFIG** - Path to custom config file
-- **PYTHON_MICROSCOPY_OUTPUT** - Override output directory
-
-## Contributing
-
-Contributions to PYTHON_MICROSCOPY are welcome. Please follow
-these guidelines:
-
-1. **Fork the project** and create a feature branch
-2. **Make your changes** with clear commit messages
-3. **Add tests** for new functionality
-4. **Update documentation** as needed
-5. **Submit a pull request** with a clear description
-
-### Code Style
-
-Follow the code style established in the upstream project.
-Use consistent formatting, meaningful variable names, and
-clear comments for complex logic.
-
-### Reporting Issues
-
-When reporting issues, please include:
-
-- Operating system and version
-- Project version or commit hash
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Relevant log output
+**Have a question?** Get in touch! \
+You can email us at support@python-microscopy.org, or raise a [support issue](https://github.com/python-microscopy/python-microscopy/issues/new?assignees=&labels=support&template=support.md&title=%5BSUPPORT%5D). We are also active on the [image.sc forum](https://forum.image.sc/) - tag your post with `pyme` and we'll be happy to support you.
 
 ## License
 
-**Overlay license:** Anticommons 0.1.0
-**Upstream license:** MIT
+Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
 
-This project is distributed under the MIT license.
-The Anticloud overlay is licensed under Anticommons 0.1.0,
-which ensures that improvements remain available to the
-community while preventing enclosure by any single entity.
+## Verification
 
-See the LICENSE file in the project root for the full
-license text and additional terms.
-
-## Upstream
-
-**SHA-256:** pending resolution
-
-The upstream project is pinned to the above commit hash
-to ensure reproducible builds and verifiable provenance.
-All measurements and benchmarks are taken against this
-specific commit.
-
-## Benchmarks
-
-Measured by the Anticloud assurance suite. Every value below is read from this
-project's `BENCH.json`, produced by a real run — the SHA3-256 of that file is
-`bbb1899985ece4d774d92dadfb9210cdc99ab121fc9d6d4cce290de48689bf18`.
-
-| Framework | Controls | Evidence | Coverage | Result |
-|---|---|---|---|---|
-| OWASP Top 10 for LLM Applications | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| OWASP Top 10 (2021) | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| SOC 2 Type II readiness | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| NIST AI Risk Management Framework | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| NIST SP 800-53 Rev. 5 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| NIST Cybersecurity Framework 2.0 | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| FedRAMP Rev. 5 | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| PCI DSS v4.0.1 | 11 controls mapped | 11 with evidence | 100.0% | PASS |
-| ISO/IEC 27001:2022 | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| MITRE ATT&CK v16 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| ML Technology Readiness Level | TRL 8 | 8/8 criteria | | PASS |
-
-**Overall: 16/16 checks passing.**
-
-See `ISOLATED_LAB_RESULTS/03_Result_Register.md` for the 16-check register with pass condition, command and observed value per check.
-
-Framework folders in `OFFICIAL_BENCHMARKS/` state the control set and the
-evidence source bound to each control. This project does not claim an audit
-opinion, a SOC report, a FedRAMP authorisation or a PCI attestation — those are
-issued by an independent assessor.
-
-## Additional Information
-
-This project is part of the Anticloud ecosystem, providing
-SCIENTIFIC_LAB functionality with measured performance characteristics.
-
-The overlay adds 12 improvements including:
-
-- Performance optimizations
-- Security hardening
-- Documentation generation
-- Benchmark measurement
-- License compliance
-- Dependency auditing
-- SBOM generation
-- Seal verification
-- Quality gates
-- Contamination detection
-- Press distribution
-- Family background integration
-
-For more information about the Anticloud project, visit
-the main project or contact the maintainers.
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
-
-
-
-## Press and Independent Publication
-
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe and Mail, Business Insider, National Post, Financial Post, StreetInsider, Digital Journal, Barchart, International Business Times, and fox47 · National Law Review.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
-
+Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
